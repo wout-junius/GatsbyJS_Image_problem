@@ -3,11 +3,13 @@ title: "Content"
 date: 2019-01-01T00:00:00+00:00
 description: "Content"
 path: "/firstpost"
+embeddedImagesLocal:
+  - '../../images/icon.png'
 --- 
 
-import { StaticImage } from "gatsby-plugin-image"
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
-<StaticImage  alt='Sam in a destroyed mall' src={"https://placekitten.com/800/600"} />
+<GatsbyImage alt='Sam in a destroyed mall' image={getImage(props.localImages[0])} />
 
 # Lorem Ipsum
 
